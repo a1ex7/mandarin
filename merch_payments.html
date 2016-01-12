@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Pay</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="./js/jquery.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo type2"></div>
+			<ul class="menu">
+				<li><a href="#">Как это работает</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			<ul class="user">
+				<li><a href="#" class="sound"></a></li>
+				<li><a href="#" class="settings"></a></li>
+				<li><a href="#" class="exit"></a></li>
+			</ul>
+			<span class="menu-open"></span>
+		</header>
+		<div class="content">
+			<nav>
+				<ul class="type2">
+					<li><a href="#" class="icon1"><span>Главная</span></a></li>
+					<li class="active"><a href="#" class="icon2"><span>Продажи</span></a></li>
+					<li><a href="#" class="icon3"><span>Выплаты</span></a></li>
+					<li><a href="#" class="icon4"><span>Рассрочка</span></a></li>
+					<li><a href="#" class="icon5"><span>Аналитика</span></a></li>
+				</ul>
+			</nav>
+			<div class="core">
+				<div class="projects-m">
+					<h2>Мои проекты</h2>
+					<button class="add">Добавить проект</button>
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th>Проект <span>Merchant ID</span></th>
+								<th>Баланс <span>Ожидается</span></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><i class="status green"></i></td>
+								<td>
+									<div>Цветная жизнь <span>252525</span></div>
+									<button class="settings"></button>
+								</td>
+								<td>2 000 <em>С</em> <span>50 000 <em>С</em></span></td>
+								<td><button class="cash">Вывести</button></td>
+							</tr>
+							<tr>
+								<td><i class="status red"></i></td>
+								<td>
+									<div>Цветная жизнь <span>252525</span></div>
+									<button class="settings"></button>
+								</td>
+								<td>2 000 <em>С</em> <span>50 000 <em>С</em></span></td>
+								<td><button class="cash">Вывести</button></td>
+							</tr>
+							<tr>
+								<td><i class="status orange"></i></td>
+								<td>
+									<div>Магазин часов <span>343434</span></div>
+									<button class="settings"></button>
+								</td>
+								<td>3 000 <em>С</em> <span>70 000 <em>С</em></span></td>
+								<td><button class="cash">Вывести</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="table-l">
+					<h2>Транзакции</h2>
+					<span class="refresh"></span>
+					<ul class="filter">
+						<li><span>По дате</span></li>
+						<li><span>Статус транзацкии</span></li>
+						<li><span>Способ оплаты</span></li>
+						<li><span>Прочие</span></li>
+					</ul>
+					<div class="search">
+						<input type="text" placeholder="Поиск по транзакциям">
+					</div>
+					<table class="type2">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Проект <span>Merchant ID</span></th>
+								<th>Дата <span>Время</span></th>
+								<th>id транзакции <span>Номер заказа</span></th>
+								<th>Плательщик <span>Способ оплаты</span></th>
+								<th>Примечание</th>
+								<th>Сумма <span>Комиссия</span></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><i class="status green"></i></td>
+								<td>Магазин электроники <span>252525</span></td>
+								<td>12/21/2014 <span>11:22:11</span></td>
+								<td>435645303450 <span>2345434556234</span></td>
+								<td>Иванов И. И. <span>Qiwi</span></td>
+								<td>Apple Watch</td>
+								<td><span class="plus">2 000 <em>С</em></span></td>
+								<td><button class="cancel">Отмена</button></td>
+							</tr>
+							<tr>
+								<td><i class="status red"></i></td>
+								<td>Лавка апельсинов <span>343434</span></td>
+								<td>12/21/2014 <span>11:22:11</span></td>
+								<td>435645303450 <span>435645303450</span></td>
+								<td>Иванов И. И. <span>VISA</span></td>
+								<td></td>
+								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
+								<td><button class="cancel">Отмена</button></td>
+							</tr>
+							<tr>
+								<td><i class="status orange"></i></td>
+								<td>Магазин электроники <span>343434</span></td>
+								<td>12/21/2014 <span>11:22:11</span></td>
+								<td>435645303450 <span>2345434556234</span></td>
+								<td>Иванов И. И. <span>Mandarin</span></td>
+								<td>Яше хоз нужды</td>
+								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
+								<td><button class="cancel">Отмена</button></td>
+							</tr>
+							<tr>
+								<td><i class="status green"></i></td>
+								<td>Магазин электроники <span>252525</span></td>
+								<td>12/21/2014 <span>11:22:11</span></td>
+								<td>435645303450 <span>2345434556234</span></td>
+								<td>Иванов И. И. <span>Qiwi</span></td>
+								<td>Apple Watch</td>
+								<td><span class="plus">2 000 <em>С</em></span></td>
+								<td><button class="cancel">Отмена</button></td>
+							</tr>
+							<tr>
+								<td><i class="status red"></i></td>
+								<td>Лавка апельсинов <span>343434</span></td>
+								<td>12/21/2014 <span>11:22:11</span></td>
+								<td>435645303450 <span>435645303450</span></td>
+								<td>Иванов И. И. <span>VISA</span></td>
+								<td></td>
+								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
+								<td><button class="cancel">Отмена</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<aside>
+				<div class="repayment">
+					<h4>Динамика погашения займа</h4>
+					<ul>
+						<li>
+							<h5>50 000 <em>С</em></h5>
+							<p>Размер займов</p>
+						</li>
+						<li>
+							<h5>43 000 <em>С</em></h5>
+							<p>Выплачено</p>
+						</li>
+					</ul>
+				</div>
+			</aside>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<div>
+			<ul class="nav">
+				<li><a href="#">Условия</a></li>
+				<li><a href="#">Безопасность</a></li>
+				<li><a href="#">Интеграция</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div>
+				<p>© 2015 PSP, LLC</p>
+				<p>Платежный сервис «Mandarin»</p>
+			</div>
+			<h6>Банковские услуги предоставляет РНКО "РИБ", лицензия Банка России №2749-К от 08.04.2015 г.</h6>
+			<ul class="icons">
+				<li><img src="./img/visa_icon.png" width="64" height="28" alt=""></li>
+				<li><img src="./img/mastercard_icon.png" width="69" height="26" alt=""></li>
+				<li><img src="./img/pci_icon.png" width="72" height="28" alt=""></li>
+				<li><img src="./img/thawte_icon.png" width="90" height="28" alt=""></li>
+			</ul>
+		</div>
+	</footer>
+	<script src="./js/dynamic.js"></script>
+</body>
+</html>

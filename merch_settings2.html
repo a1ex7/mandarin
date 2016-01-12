@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Mandarin</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="./js/jquery.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo type1"></div>
+			<ul class="menu">
+				<li><a href="#">Как это работает</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			<ul class="user">
+				<li><a href="#" class="sound"></a></li>
+				<li class="active"><a href="#" class="settings">Настройки</a></li>
+				<li><a href="#" class="exit"></a></li>
+			</ul>
+			<span class="menu-open"></span>
+		</header>
+		<div class="content">
+			<nav>
+				<ul class="type2">
+					<li><a href="#" class="icon1"><span>Главная</span></a></li>
+					<li><a href="#" class="icon2"><span>Продажи</span></a></li>
+					<li><a href="#" class="icon3"><span>Выплаты</span></a></li>
+					<li><a href="#" class="icon4"><span>Рассрочка</span></a></li>
+					<li><a href="#" class="icon5"><span>Аналитика</span></a></li>
+				</ul>
+			</nav>
+			<div class="core">
+				<div class="user-s">
+					<ul>
+						<li class="active"><a href="1">Анкеты</a></li>
+						<li><a href="2">Безопасность</a></li>
+						<li><a href="3">Пользователи</a></li>
+						<li><a href="4">Оповещения</a></li>
+						<li><a href="5">Реквизиты</a></li>
+					</ul>
+					<div class="form" data-tab="1">
+						<div class="user-type" data-usertype="1">
+							<h4 class="toggle">Общие сведения</h4>
+							<div class="group">
+								<p><span>Полное наименование</span> <input type="text"></p>
+								<p><span>Краткое наименование</span> <input type="text"></p>
+								<p><span>ОГРН</span> <input type="text"></p>
+								<p><span>ИНН</span> <input type="text"></p>
+								<p><span>КПП</span> <input type="text"></p>
+								<p><span>ОКВЭД (основной)</span> <input type="text"></p>
+								<p><span>Телефон</span> <input type="text"></p>
+								<p><span>Юридический адрес</span> <input type="text"></p>
+								<p>
+									<span>Фактический адрес</span>
+									<span class="choice">
+										<em>Отличается от юридического адреса?</em>
+										<span class="switch-element">
+											<em data-val="1">Да</em>
+											<em data-val="0">Нет</em>
+											<input type="checkbox" checked>
+										</span>
+									</span>
+									<input type="text">
+								</p>
+								<p>
+									<span>Почтовый адрес</span>
+									<span class="choice">
+										<em>Отличается от юридического адреса?</em>
+										<span class="switch-element">
+											<em data-val="1">Да</em>
+											<em data-val="0">Нет</em>
+											<input type="checkbox" checked>
+										</span>
+									</span>
+									<input type="text">
+								</p>
+							</div>
+							<h4 class="toggle">Сведения о руководителе предприятия</h4>
+							<div class="group">
+								<p><span>ФИО</span> <input type="text"></p>
+								<p><span>Должность</span> <input type="text"></p>
+								<p><span>Основание действий</span> <input type="text"></p>
+							</div>
+							<h4 class="toggle">Сведения о главном бухгалтере предприятия</h4>
+							<div class="group">
+								<p><span>ФИО</span> <input type="text"></p>
+							</div>
+							<h4 class="toggle">Контактное лицо <span class="add"></span></h4>
+							<div class="group">
+								<p><span>ФИО</span> <input type="text"></p>
+								<p><span>Телефон</span> <input type="text"></p>
+								<p><span>E-mail</span> <input type="text"></p>
+							</div>
+							<h4 class="toggle">Лицензируемая деятельность <span class="add"></span></h4>
+							<div class="group">
+								<p><span>Вид</span> <input type="text"></p>
+								<p><span>Номер</span> <input type="text"></p>
+								<p><span>Дата выдачи</span> <input type="text"></p>
+								<p><span>Кем выдана</span> <input type="text"></p>
+								<p><span>Срок действия</span> <input type="text"></p>
+								<p><span>Перечень лиценз. деятельности</span> <input type="text"></p>
+							</div>
+							<button>Отправить</button>
+						</div>
+						<div class="user-type" data-usertype="2">
+							<h4 class="toggle">Общие сведения</h4>
+							<div class="group">
+								<p><span>Наименование</span> <input type="text"></p>
+								<p><span>ОГРНИП</span> <input type="text"></p>
+								<p><span>ИНН</span> <input type="text"></p>
+								<p><span>ОКВЭД (основной)</span> <input type="text"></p>
+								<p><span>Телефон</span> <input type="text"></p>
+								<p><span>Адрес регистрации</span> <input type="text"></p>
+							</div>
+							<h4 class="toggle">Контактное лицо <span class="add"></span></h4>
+							<div class="group">
+								<p><span>ФИО</span> <input type="text"></p>
+								<p><span>Контактное лицо</span> <input type="text"></p>
+								<p><span>Телефон</span> <input type="text"></p>
+								<p><span>E-mail</span> <input type="text"></p>
+							</div>
+							<button class="sent">Отправлено</button>
+							<h6 class="status progress">В обработке</h6>
+						</div>
+					</div>
+					<div class="form" data-tab="2">
+						<p><span>E-mail</span> <input type="text"></p>
+						<p><span>Телефон</span> <input type="text"></p>
+						<p>
+							<span>Подтверждение входа по SMS</span>
+							<input type="checkbox" class="switch" checked>
+						</p>
+						<p>
+							<span>Подтверждение входа по e-mail</span>
+							<input type="checkbox" class="switch" checked>
+						</p>
+						<h4>Смена пароля</h4>
+						<p><span>Текущий пароль</span> <input type="password" value="******"></p>
+						<p><span>Новый пароль</span> <input type="password" value="******"></p>
+						<p><span>Повторите ввод</span> <input type="password" value="******"></p>
+						<button>Сохранить</button>
+					</div>
+					<div class="form" data-tab="3">
+						<table class="user-table">
+							<thead>
+								<tr>
+									<th></th>
+									<th>ФИО</th>
+									<th>E-mail</th>
+									<th>Телефон</th>
+									<th>Роль</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="status green"></span></td>
+									<td>Иванов Иван Иванович</td>
+									<td>i@mandarinbank.ru</td>
+									<td>+7 (946) 420-03-40</td>
+									<td>Администратор</td>
+									<td><span class="icon locked"></span></td>
+								</tr>
+								<tr>
+									<td><span class="status red"></span></td>
+									<td>Иванов Иван Иванович</td>
+									<td>i@mandarinbank.ru</td>
+									<td>+7 (946) 420-03-40</td>
+									<td>Администратор</td>
+									<td><span class="icon"></span></td>
+								</tr>
+								<tr>
+									<td><span class="status orange"></span></td>
+									<td>Иванов Иван Иванович</td>
+									<td>i@mandarinbank.ru</td>
+									<td>+7 (946) 420-03-40</td>
+									<td>Администратор</td>
+									<td><span class="icon"></span></td>
+								</tr>
+							<tbody>
+						</table>
+						<h4 class="toggle">Добавить пользователя</h4>
+						<div class="group">
+							<p><span>Имя</span> <input type="text"></p>
+							<p><span>E-mail</span> <input type="text"></p>
+							<p><span>Телефон</span> <input type="text"></p>
+							<p><span>Роль</span> <input type="text"></p>
+							<button>Добавить</button>
+						</div>
+					</div>
+					<div class="form" data-tab="4">
+						<table class="user-notes">
+							<thead>
+								<tr>
+									<th>Тип оповещения</th>
+									<th><span>E-mail</span></th>
+									<th><span>SMS</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span>Оповещение о акциях</span></td>
+									<td><input type="checkbox" class="switch" checked></td>
+									<td><input type="checkbox" class="switch" checked></td>
+								</tr>
+								<tr>
+									<td><span>Ответы службы поддержки</span></td>
+									<td><input type="checkbox" class="switch"></td>
+									<td><input type="checkbox" class="switch"></td>
+								</tr>
+								<tr>
+									<td><span>Оповещение о входе</span></td>
+									<td><input type="checkbox" class="switch" checked></td>
+									<td><input type="checkbox" class="switch" checked></td>
+								</tr>
+								<tr>
+									<td><span>Оповещение о входящих платежах</span></td>
+									<td><input type="checkbox" class="switch"></td>
+									<td><input type="checkbox" class="switch"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="form" data-tab="5">
+						<h4>Банковские счета <span class="add"></span></h4>
+						<ul class="acc-list">
+							<li>Сбербанк 42307.810.5.9038.0710235</li>
+							<li>Сбербанк 42307.810.5.9038.0710235</li>
+							<li>Сбербанк 42307.810.5.9038.0710235</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<aside>
+				<div class="form-progress">
+					<h4>Здесь вы можете заполнить свою анкету для договора</h4>
+					<div class="controls">
+						<span class="switch-element">
+							<em data-type="1">ЮЛ</em>
+							<em data-type="2">ИП</em>
+						</span>
+						<ul>
+							<li><span class="icon1"></span></li>
+							<!--<li><span class="icon2"></span></li>-->
+							<li><span class="icon3"></span></li>
+							<li><span class="icon4"></span></li>
+							<!--<li><span class="icon4 locked"></span></li>-->
+						<ul>
+					</div>
+					<h6 class="status progress">В обработке</h6>
+					<ul class="steps">
+						<li class="active">Заполните все поля</li>
+						<li>Отправьте информацию</li>
+						<li>Cохраните и распечатайте</li>
+					</ul>
+				</div>
+			</aside>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<div>
+			<ul class="nav">
+				<li><a href="#">Условия</a></li>
+				<li><a href="#">Безопасность</a></li>
+				<li><a href="#">Интеграция</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div>
+				<p>© 2015 PSP, LLC</p>
+				<p>Платежный сервис «Mandarin»</p>
+			</div>
+			<h6>Банковские услуги предоставляет РНКО "РИБ", лицензия Банка России №2749-К от 08.04.2015 г.</h6>
+			<ul class="icons">
+				<li><img src="./img/visa_icon.png" width="64" height="28" alt=""></li>
+				<li><img src="./img/mastercard_icon.png" width="69" height="26" alt=""></li>
+				<li><img src="./img/pci_icon.png" width="72" height="28" alt=""></li>
+				<li><img src="./img/thawte_icon.png" width="90" height="28" alt=""></li>
+			</ul>
+		</div>
+	</footer>
+	<script src="./js/onoff.js"></script>
+	<script src="./js/dynamic.js"></script>
+</body>
+</html>

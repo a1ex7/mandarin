@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Pay</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="./js/jquery.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo type2"></div>
+			<ul class="menu">
+				<li><a href="#">Как это работает</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			<ul class="user">
+				<li><a href="#" class="sound"></a></li>
+				<li class="active"><a href="#" class="settings">Настройки</a></li>
+				<li><a href="#" class="exit"></a></li>
+			</ul>
+			<span class="menu-open"></span>
+		</header>
+		<div class="content">
+			<nav>
+				<ul class="type2">
+					<li class="active"><a href="#" class="icon1"><span>Главная</span></a></li>
+					<li><a href="#" class="icon2"><span>Продажи</span></a></li>
+					<li><a href="#" class="icon3"><span>Выплаты</span></a></li>
+					<li><a href="#" class="icon4"><span>Рассрочка</span></a></li>
+					<li><a href="#" class="icon5"><span>Аналитика</span></a></li>
+				</ul>
+			</nav>
+			<div class="core">
+				<div class="projects-s">
+					<h2><span>Настройки проекта –</span> Цветная жизнь</h2>
+					<ul>
+						<li class="active"><a href="1">Общие</a></li>
+						<li><a href="2">Интеграция</a></li>
+						<li><a href="3">Способы оплаты</a></li>
+						<li><a href="4">Вывод средств</a></li>
+					</ul>
+					<div class="form" data-tab="1">
+						<p><span>Название проекта</span> <input type="text"></p>
+						<p><span>Адрес сайта</span> <input type="text"></p>
+						<button>Сохранить</button>
+					</div>
+					<div class="form" data-tab="2">
+						<p><span>Callback url</span> <input type="text"></p>
+						<p><span>User Redirect URL</span> <input type="text"></p>
+						<p><span>Merchant id</span> <strong>262626</strong></p>
+						<p><span>Secret</span> <strong>Gf45DS5d</strong></p>
+						<button>Сохранить</button>
+					</div>
+					<div class="form" data-tab="3">
+						<ul>
+							<li>
+								<p>Банковские карты</p>
+								<h5>3.5%</h5>
+								<input type="checkbox" class="switch" checked>
+							</li>
+							<li>
+								<p>QIWI</p>
+								<h5>3.5%</h5>
+								<input type="checkbox" class="switch" checked>
+							</li>
+							<li>
+								<p>Yandex.Dengi</p>
+								<h5>3.5%</h5>
+								<input type="checkbox" class="switch" checked>
+							</li>
+							<li>
+								<p>Webmoney</p>
+								<h5>3.5%</h5>
+								<input type="checkbox" class="switch" checked>
+							</li>
+							<li>
+								<p>Contact</p>
+								<h5>3.5%</h5>
+								<input type="checkbox" class="switch" checked>
+							</li>
+						</ul>
+					</div>
+					<div class="form" data-tab="4">
+						<p class="switch-c"><span>Вывод один раз в (дней)</span> <input type="checkbox" class="switch"> <input type="text"></p>
+						<p class="switch-c"><span>Выводить если сумма больше (<em>С</em>)</span> <input type="checkbox" class="switch"> <input type="text"></p>
+						<h4>Реквизиты для вывода</h4>
+						<p><span>Расчетный счет</span> <input type="text"></p>
+						<p><span>БИК</span> <input type="text"></p>
+						<p><span>Наименование банка</span> <input type="text"></p>
+						<p><span>Корреспондентский счет</span> <input type="text"></p>
+					</div>
+				</div>
+			</div>
+			<aside>
+				<div class="repayment">
+					<h4>Динамика погашения займа</h4>
+					<ul>
+						<li>
+							<h5>50 000 <em>С</em></h5>
+							<p>Размер займов</p>
+						</li>
+						<li>
+							<h5>43 000 <em>С</em></h5>
+							<p>Выплачено</p>
+						</li>
+					</ul>
+				</div>
+			</aside>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<div>
+			<ul class="nav">
+				<li><a href="#">Условия</a></li>
+				<li><a href="#">Безопасность</a></li>
+				<li><a href="#">Интеграция</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div>
+				<p>© 2015 PSP, LLC</p>
+				<p>Платежный сервис «Mandarin»</p>
+			</div>
+			<h6>Банковские услуги предоставляет РНКО "РИБ", лицензия Банка России №2749-К от 08.04.2015 г.</h6>
+			<ul class="icons">
+				<li><img src="./img/visa_icon.png" width="64" height="28" alt=""></li>
+				<li><img src="./img/mastercard_icon.png" width="69" height="26" alt=""></li>
+				<li><img src="./img/pci_icon.png" width="72" height="28" alt=""></li>
+				<li><img src="./img/thawte_icon.png" width="90" height="28" alt=""></li>
+			</ul>
+		</div>
+	</footer>
+	<script src="./js/onoff.js"></script>
+	<script src="./js/dynamic.js"></script>
+</body>
+</html>
