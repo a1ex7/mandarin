@@ -76,13 +76,19 @@ function servUL() {
 		$('.serv-ul li').css({
 			'width': ($('.core').outerWidth()-80)/3+'px'
 		});
-		var aside = $('aside').detach();
-		$('.content').append(aside);
 	}
 	else {
 		$('.serv-ul li').css({
 			'width': '100%'
 		});
+	}
+}
+function aside() {
+	if ( $('.menu-open').is(':hidden') ) {
+		var aside = $('aside').detach();
+		$('.content').append(aside);
+	}
+	else {
 		var aside = $('aside').detach();
 		$('.content').prepend(aside);
 	}
@@ -219,17 +225,39 @@ $(document).ready(function() {
 	$('.choice .switch-element').each(function() {
 		if ( $(this).find('input[type="checkbox"]').prop('checked') == true ) {
 			$(this).find('[data-val="1"]').addClass('active').siblings().removeClass('active');
+			$(this).parent('.choice').siblings('input').show();
 		} else {
 			$(this).find('[data-val="0"]').addClass('active').siblings().removeClass('active');
+			$(this).parent('.choice').siblings('input').hide();
 		}
 	});
 	$('.choice .switch-element em').bind('click', function() {
 		if ( $(this).attr('data-val') == 1 ) {
 			$(this).siblings('input[type="checkbox"]').prop('checked', true);
+			$(this).parents('.choice').siblings('input').show();
 		} else {
 			$(this).siblings('input[type="checkbox"]').prop('checked', false);
+			$(this).parents('.choice').siblings('input').hide();
 		}
 		$(this).addClass('active').siblings().removeClass('active');
+	});
+	if ( $('.user-s > .tab-sel').is(':visible') ) {
+		$('.form[data-tab="'+$('.user-s > .tab-sel select').val()+'"]').show().siblings('.form').hide();
+	}
+	if ( $('.user-s > .tab-sel').length > 0 ) {
+		$('select').change(function() {
+			$('.form[data-tab="'+$(this).val()+'"]').show().siblings('.form').hide();
+		});
+	}
+	if ( $('aside').length > 0 ) {
+		aside();
+	}
+	if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('body').addClass('mobile-v');
+	}
+	$('.mobile-v .form-progress h4').bind('click', function(e) {
+		e.preventDefault();
+		$(this).parent().toggleClass('opened');
 	});
 });
 $(window).resize(function() {
@@ -239,5 +267,8 @@ $(window).resize(function() {
 	}
 	if ( $('.projects-m td div').length > 0 ) {
 		projSettings();
+	}
+	if ( $('aside').length > 0 ) {
+		aside();
 	}
 });
