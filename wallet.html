@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Mandarin</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="./js/jquery.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo type1"></div>
+			<ul class="menu">
+				<li><a href="#">Как это работает</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			<ul class="user">
+				<li><a href="#" class="sound"></a></li>
+				<li><a href="#" class="settings"></a></li>
+				<li><a href="#" class="exit"></a></li>
+			</ul>
+			<span class="menu-open"></span>
+		</header>
+		<div class="content">
+			<nav>
+				<ul class="type1">
+					<li><a href="#" class="icon1"><span>Главная</span></a></li>
+					<li class="active"><a href="#" class="icon2"><span>Платежи</span></a></li>
+					<li><a href="#" class="icon3"><span>Инвестиции</span></a></li>
+					<li><a href="#" class="icon4"><span>Займы</span></a></li>
+					<li><a href="#" class="icon5"><span>Профи</span></a></li>
+				</ul>
+			</nav>
+			<div class="core">
+				<div class="search-b">
+					<input type="text" placeholder="Товар, услуга или магазин">
+				</div>
+				<div class="wallet-b">
+					<h2>Товары и услуги</h2>
+					<ul class="list">
+						<li>
+							<div>
+								<img src="./img/pay_type1_icon.svg" width="15" height="24" alt="">
+							</div>
+							<p>ЖКХ</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_type2_icon.svg" width="19" height="24" alt="">
+							</div>
+							<p>Мобильная связь</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_type3_icon.svg" width="25" height="25" alt="">
+							</div>
+							<p>Телефон</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_type4_icon.svg" width="24" height="24" alt="">
+							</div>
+							<p>Интернет</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_type5_icon.svg" width="24" height="24" alt="">
+							</div>
+							<p>Налоги</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_type6_icon.svg" width="23" height="23" alt="">
+							</div>
+							<p>Штрафы ГИБДД</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_type7_icon.svg" width="25" height="23" alt="">
+							</div>
+							<p>Магазины</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_type8_icon.svg" width="24" height="24" alt="">
+							</div>
+							<p>AppStore</p>
+						</li>
+					</ul>
+					<h2>Избранное</h2>
+					<ul class="favorite">
+						<li>
+							<div>
+								<img src="./img/pay_favorite1_icon.svg" width="48" height="46" alt="">
+							</div>
+							<p>Megafon</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_favorite2_icon.svg" width="32" height="50" alt="">
+							</div>
+							<p>Ростелеком</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_favorite3_icon.svg" width="35" height="36" alt="">
+							</div>
+							<p>Перевод</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_favorite4_icon.svg" width="46" height="45" alt="">
+							</div>
+							<p>МТС</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_favorite5_icon.svg" width="46" height="46" alt="">
+							</div>
+							<p>Beeline</p>
+						</li>
+						<li>
+							<div>
+								<img src="./img/pay_favorite6_icon.svg" width="30" height="48" alt="">
+							</div>
+							<p>Yota</p>
+						</li>
+					</ul>
+					<h2>Переводы</h2>
+					<div class="transfer">
+						<input type="text" placeholder="Кому">
+						<input type="text" placeholder="Сколько">
+						<button>Перевести</button>
+					</div>
+				</div>
+				<div class="table-l">
+					<h2>История платежей</h2>
+					<span class="refresh"></span>
+					<ul class="filter">
+						<li><span>По дате</span></li>
+					</ul>
+					<table class="type3">
+						<thead>
+							<tr>
+								<th>Статус</th>
+								<th>Дата <span>Время</span></th>
+								<th>id транзакции <span>Номер заказа</span></th>
+								<th>Плательщик <span>Способ оплаты</span></th>
+								<th>Примечание</th>
+								<th>Номер <span>Получатель платежа</span></th>
+								<th>Сумма <span>Комиссия</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><i class="status red"></i></td>
+								<td>12/21/2014 <span>11:22:11</td>
+								<td>435645303450 <span>2345434556234</span></td>
+								<td>Текущий счет <span>MandarinWallet</span></td>
+								<td>Супруге на телефон</td>
+								<td>89263207330 <span>МТС</span></td>
+								<td><span class="plus">2 500 <em>С</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status green"></i></td>
+								<td>12/21/2014 <span>11:22:11</td>
+								<td>435645303450 <span>2345434556234</span></td>
+								<td>*** 1890 <span>VISA / MC</span></td>
+								<td>Яше хоз нужны</td>
+								<td>*** 1890 <span>VISA / MC</span></td>
+								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status orange"></i></td>
+								<td>12/21/2014 <span>11:22:11</td>
+								<td>435645303450 <span>2345434556234</span></td>
+								<td>*** 1890 <span>VISA / MC</span></td>
+								<td></td>
+								<td>*** 1890 <span>VISA / MC</span></td>
+								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<aside>
+				<ul class="card-l">
+					<h2>Мои счета</h2>
+					<ul>
+						<li class="type1">
+							<h4>350 000 <em>С</em></h4>
+							<p>Текущий счет</p>
+							<ul>
+								<li class="icon1" data-tip="Подсказка"></li>
+								<li class="icon2" data-tip="Подсказка"></li>
+								<li class="icon3" data-tip="Подсказка"></li>
+							</ul>
+						</li>
+						<li class="type2">
+							<h4>40 000 <em>С</em></h4>
+							<p>Инвестиционный счет</p>
+							<ul>
+								<li class="icon4" data-tip="Инвестировать"></li>
+								<li class="icon5" data-tip="Подсказка"></li>
+							</ul>
+							<div class="progress-l invest" data-l="500 000" data-r="18" data-p="18">
+								<div></div>
+							</div>
+						</li>
+						<li class="type3">
+							<h4>350 000 <em>С</em></h4>
+							<p>Доступный лимит</p>
+							<ul>
+								<li class="icon6" data-tip="Подсказка"></li>
+							</ul>
+							<div class="progress-l limit" data-l="10 000" data-r="1 800" data-p="82">
+								<div></div>
+							</div>
+							<h6>Очередной платеж 24.08, 3 000 <em>С</em> <a href="#">Погасить</a></h6>
+						</li>
+					</ul>
+				</ul>
+				<div class="repayment">
+					<h4>Динамика погашения займа</h4>
+					<ul>
+						<li>
+							<h5>50 000 <em>С</em></h5>
+							<p>Размер займов</p>
+						</li>
+						<li>
+							<h5>43 000 <em>С</em></h5>
+							<p>Выплачено</p>
+						</li>
+					</ul>
+				</div>
+			</aside>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<div>
+			<ul class="nav">
+				<li><a href="#">Условия</a></li>
+				<li><a href="#">Безопасность</a></li>
+				<li><a href="#">Интеграция</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div>
+				<p>© 2015 PSP, LLC</p>
+				<p>Платежный сервис «Mandarin»</p>
+			</div>
+			<h6>Банковские услуги предоставляет РНКО "РИБ", лицензия Банка России №2749-К от 08.04.2015 г.</h6>
+			<ul class="icons">
+				<li><img src="./img/visa_icon.png" width="64" height="28" alt=""></li>
+				<li><img src="./img/mastercard_icon.png" width="69" height="26" alt=""></li>
+				<li><img src="./img/pci_icon.png" width="72" height="28" alt=""></li>
+				<li><img src="./img/thawte_icon.png" width="90" height="28" alt=""></li>
+			</ul>
+		</div>
+	</footer>
+	<script src="./js/dynamic.js"></script>
+</body>
+</html>
