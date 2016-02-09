@@ -27,97 +27,92 @@
 		<div class="content">
 			<nav>
 				<ul class="type1">
-					<li class="active"><a href="#" class="icon1"><span>Главная</span></a></li>
+					<li><a href="#" class="icon1"><span>Главная</span></a></li>
 					<li><a href="#" class="icon2"><span>Платежи</span></a></li>
-					<li><a href="#" class="icon3"><span>Инвестиции</span></a></li>
+					<li class="active"><a href="#" class="icon3"><span>Инвестиции</span></a></li>
 					<li><a href="#" class="icon4"><span>Займы</span></a></li>
 					<li><a href="#" class="icon5"><span>Профи</span></a></li>
 				</ul>
 			</nav>
 			<div class="core">
-				<ul class="serv-ul">
-					<li class="type1">
-						<h3><span>Приумножай капиталы</span></h3>
-						<button>Инвестировать</button>
-					</li>
-					<li class="type2">
-						<h3><span>Займи на море!</span></h3>
-						<button>Получить займ</button>
-					</li>
-					<li class="type3">
-						<h3><span>Пополняй кошелек картой</span></h3>
-						<button>Привязать карту</button>
-					</li>
-				</ul>
+				<div class="search-b">
+					<input type="text" placeholder="Товар, услуга или магазин">
+				</div>
+				<div class="wallet-b">
+					<h2>Калькулятор инвестора</h2>
+					<div class="calc-b">
+						<div class="slide type2">
+							<h6>Инвестиция</h6>
+							<div class="sum" data-min="5000" data-max="200000" data-step="1000" data-default="5000"></div>
+							<ul class="sum">
+								<li>5 тыс.</li>
+								<li>25 тыс.</li>
+								<li>100 тыс.</li>
+								<li>200+ тыс.</li>
+							</ul>
+							<span class="val sum"></span>
+						</div>
+						<div class="slide type2">
+							<h6>Срок</h6>
+							<div class="per" data-min="3" data-max="12" data-step="3" data-default="6"></div>
+							<span class="val per"></span>
+							<ul class="per">
+								<li>3</li>
+								<li>6</li>
+								<li>9</li>
+								<li>12</li>
+							</ul>
+						</div>
+						<div class="invest-t">
+							<div class="category">
+								<h6>Категория</h6>
+								<ul>
+									<li>A</li>
+									<li>B</li>
+									<li>C</li>
+									<li>D</li>
+									<li>E</li>
+								</ul>
+							</div>
+							<div class="income">
+								<h6>Ожидаемый доход</h6>
+								<h4>18%</h4>
+							</div>
+							<button>Инвестировать</button>
+						</div>
+					</div>
+				</div>
 				<div class="table-l">
-					<h2>Транзакции</h2>
+					<h2>История инвестиций</h2>
 					<span class="refresh"></span>
 					<ul class="filter">
 						<li><span>По дате</span></li>
-						<li><span>Статус транзацкии</span></li>
-						<li><span>Способ оплаты</span></li>
-						<li><span>Прочие</span></li>
 					</ul>
-					<div class="search">
-						<input type="text" placeholder="Поиск по транзакциям">
-					</div>
-					<table class="type1">
+					<table class="type5">
 						<thead>
 							<tr>
 								<th></th>
-								<th>Дата <span>Время</span></th>
-								<th>Номер счета</th>
-								<th>Плательщик <span>Способ оплаты</span></th>
-								<th>Примечание</th>
-								<th>Номер <span>Получатель платежа</span></th>
-								<th>Сумма <span>Комиссия</span></th>
+								<th>Название <span>Категория</span></th>
+								<th>Начало <span>Окончание</span></th>
+								<th>Срок инвест. <span>Срок до оконч.</span></th>
+								<th>Инвестиция <span>Заемщики</span></th>
+								<th>Ожид. дох. <em>С</em> <span>Ожид. дох. %</span></th>
+								<th>Получено <span>Факт. дох.</span></th>
+								<th>Просрочка <span>% просроч.</span></th>
+								<th>Об. невозврата <span>% просроч.</span></th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td><i class="status green"></i></td>
-								<td>12/21/2014 <span>11:22:11</td>
-								<td>345645303450</td>
-								<td>Текущий счет <span>MandarinWallet</span></td>
-								<td>Супруге на телефон</td>
-								<td>89263207330 <span>МТС</span></td>
-								<td><span class="plus">2 500 <em>С</em></span></td>
-							</tr>
-							<tr>
-								<td><i class="status red"></i></td>
-								<td>12/21/2014 <span>11:22:11</td>
-								<td>345645303450</td>
-								<td>*** 1890 <span>VISA / MC</span></td>
+								<td>Агрессивная <span>С</span></td>
+								<td>2/23/2015 <span>2/23/2015</span></td>
+								<td>6 мес. <span>1,1 мес.</span></td>
+								<td>200 000 <em>С</em> <span>100</span></td>
+								<td>246 954 <em>С</em> <span>35%</span></td>
+								<td>150 000 <em>С</em></td>
 								<td></td>
-								<td>*** 1890 <span>VISA / MC</span></td>
-								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
-							</tr>
-							<tr>
-								<td><i class="status orange"></i></td>
-								<td>12/21/2014 <span>11:22:11</td>
-								<td>345645303450</td>
-								<td>*** 1890 <span>VISA / MC</span></td>
-								<td>Яше хоз нужны</td>
-								<td>*** 1890 <span>VISA / MC</span></td>
-								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
-							</tr>
-							<tr>
-								<td><i class="status green"></i></td>
-								<td>12/21/2014 <span>11:22:11</td>
-								<td>345645303450</td>
-								<td>Текущий счет <span>MandarinWallet</span></td>
-								<td>Супруге на телефон</td>
-								<td>89263207330 <span>МТС</span></td>
-								<td><span class="plus">2 500 <em>С</em></span></td>
-							</tr>
-							<tr>
-								<td><i class="status red"></i></td>
-								<td>12/21/2014 <span>11:22:11</td>
-								<td>345645303450</td>
-								<td>*** 1890 <span>VISA / MC</span></td>
 								<td></td>
-								<td>*** 1890 <span>VISA / MC</span></td>
-								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
 							</tr>
 						</tbody>
 					</table>
@@ -198,6 +193,8 @@
 			</ul>
 		</div>
 	</footer>
+	<script src="./js/jquery-ui.js"></script>
+	<script src="./js/touchpunch.js"></script>
 	<script src="./js/dynamic.js"></script>
 </body>
 </html>

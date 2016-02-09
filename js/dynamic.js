@@ -94,14 +94,12 @@ function aside() {
 	}
 }
 function walletList() {
-	if ( $('.menu-open').is(':hidden') ) {
-		$('.wallet-b .list li').css({
-			'margin-right': ($('.wallet-b .list').width()-$('.wallet-b .list li').width()*4)/3-3+'px'
-		});
-		$('.wallet-b .list li:nth-child(4n)').css({
-			'margin-right': '-20px'
-		});
-	}
+	$('.wallet-b .list li').css({
+		'margin-right': ($('.wallet-b .list').width()-$('.wallet-b .list li').width()*4)/3-3+'px'
+	});
+	$('.wallet-b .list li:nth-child(4n)').css({
+		'margin-right': '-20px'
+	});
 }
 function walletFavorite() {
 	if ( $('.menu-open').is(':hidden') ) {
@@ -109,6 +107,13 @@ function walletFavorite() {
 			'margin-right': ($('.wallet-b .favorite').width()-$('.wallet-b .favorite li').outerWidth()*6)/5-3+'px'
 		});
 		$('.wallet-b .favorite li:nth-child(6n)').css({
+			'margin-right': '-20px'
+		});
+	} else {
+		$('.wallet-b .favorite li').css({
+			'margin-right': ($('.wallet-b .favorite').width()-$('.wallet-b .favorite li').outerWidth()*3)/2-3+'px'
+		});
+		$('.wallet-b .favorite li:nth-child(3n)').css({
 			'margin-right': '-20px'
 		});
 	}
@@ -304,7 +309,70 @@ $(document).ready(function() {
 			$(this).siblings('ul').stop().show();
 		}
 	});
-    $('.transfer-b .form p input.num').number(true, 2, '.', '');
+	if ( $('.input.num').length > 0 ) {
+		$('.transfer-b .form p input.num').number(true, 2, '.', '');
+	}
+	$('.calc-b .slide > div').each(function() {
+		var t = $(this);
+		t.slider({
+			min: eval(t.attr('data-min')),
+			max: eval(t.attr('data-max')),
+			step: eval(t.attr('data-step')),
+			value: eval(t.attr('data-default')),
+			range: 'min',
+			slide: function(event, ui) {
+				if ( t.siblings('span.sum').length > 0 ) {
+					var v = ui.value.toString();
+					t.siblings('span.sum').html(v.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+'<em>С</em>');
+				}
+				if ( t.siblings('span.per').length > 0 ) {
+					if ( ui.value == 1 ) {
+						a = 'месяц'
+					} else if ( ui.value >=5 ) {
+						a = 'месяцев'
+					} else {
+						a = 'месяца'
+					}
+					t.siblings('span.per').html(ui.value+' '+a);
+				}
+				t.siblings('span').attr('data-val', ui.value);
+				if ( $('.finance-t').length > 0 ) {
+					$('.finance-t h4 span').html(Math.floor($('.slide span.sum').attr('data-val')/$('.slide span.per').attr('data-val')).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+'<em>С</em>');
+				}
+			}
+		});
+		if ( t.siblings('span.sum').length > 0 ) {
+			t.siblings('span.sum').html(t.attr('data-default').replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+'<em>С</em>');
+		}
+		if ( t.siblings('span.per').length > 0 ) {
+			if ( eval(t.attr('data-default')) == 1 ) {
+				a = 'месяц'
+			} else if ( eval(t.attr('data-default')) >=5 ) {
+				a = 'месяцев'
+			} else {
+				a = 'месяца'
+			}
+			t.siblings('span.per').html(t.attr('data-default')+' '+a);
+		}
+		t.siblings('span').attr('data-val', eval(t.attr('data-default')));
+		if ( $('.finance-t').length > 0 ) {
+			$('.finance-t h4 span').html(Math.floor($('.slide span.sum').attr('data-val')/$('.slide span.per').attr('data-val')).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+'<em>С</em>');
+		}
+	});
+	if ( $('.finance-t').length > 0 ) {
+		$('.wallet-b').css({
+			'margin-bottom': '23px'
+		});
+	}
+	if ( $('.invest-t').length > 0 ) {
+		$('.wallet-b').css({
+			'margin-bottom': '53px'
+		});
+	}
+	$('.calc-b .invest-t .category ul li').bind('click', function(e) {
+		e.preventDefault();
+		$(this).addClass('active').siblings().removeClass();
+	}).filter(':first').click();
 });
 $(window).resize(function() {
 	zoom();
