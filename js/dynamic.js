@@ -358,6 +358,31 @@ $(document).ready(function() {
 		if ( $('.finance-t').length > 0 ) {
 			$('.finance-t h4 span').html(Math.floor($('.slide span.sum').attr('data-val')/$('.slide span.per').attr('data-val')).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+'<em>С</em>');
 		}
+		t.siblings('input').focusin(function() {
+			var s = $(this).siblings('.val');
+			s.css({
+				'color': 'transparent'
+			});
+			$(this).attr('data-val', s.attr('data-val')).css({
+				'color': '#333333'
+			}).val(s.attr('data-val').toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+		});
+		t.siblings('input').focusout(function() {
+			var s = $(this).siblings('.val');
+			s.css({
+				'color': '#333333'
+			});
+			$(this).css({
+				'color': 'transparent'
+			});
+		});
+		t.siblings('input').keyup(function() {
+			$(this).attr('data-val', $(this).val().replace(/\s/g, ''));
+			$(this).val($(this).attr('data-val').toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+			$(this).siblings('.val').attr('data-val', $(this).attr('data-val'));
+			$(this).siblings('.val').html($(this).attr('data-val').toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')+'<em>С</em>');
+			t.slider('value', $(this).attr('data-val'));
+		});
 	});
 	if ( $('.finance-t').length > 0 ) {
 		$('.wallet-b').css({
