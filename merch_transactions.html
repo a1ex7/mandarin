@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Pay</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<!--<link href="./favicon.ico" rel="shortcut icon">-->
+	<link href="./css/style.css" rel="stylesheet">
+	<script src="./js/jquery.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo type1"></div>
+			<ul class="menu">
+				<li><a href="#">Как это работает</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">FAQ</a></li>
+			</ul>
+			<ul class="user">
+				<li><a href="#" class="sound"></a></li>
+				<li><a href="#" class="settings"></a></li>
+				<li><a href="#" class="exit"></a></li>
+			</ul>
+			<span class="menu-open"></span>
+		</header>
+		<div class="content">
+			<nav>
+				<ul class="type2">
+					<li><a href="#" class="icon1"><span>Главная</span></a></li>
+					<li><a href="#" class="icon2"><span>Продажи</span></a></li>
+					<li><a href="#" class="icon3"><span>Выплаты</span></a></li>
+					<li><a href="#" class="icon4"><span>Рассрочка</span></a></li>
+					<li class="active"><a href="#" class="icon5"><span>Транзакции</span></a></li>
+				</ul>
+			</nav>
+			<div class="core">
+				<div class="filter-m">
+					<span class="expand"></span>
+					<ul class="circulation">
+						<li>
+							<p>Оборот</p>
+							<h5>30 000 <em>С</em></h5>
+						</li>
+						<li>
+							<p>Количество</p>
+							<h5>480</h5>
+						</li>
+					</ul>
+					<!--<div class="title">
+						<h2>Фильтры</h2>
+						<ul>
+							<li>Недельниий отчет<i class="remove"></i></li>
+							<li>Отчет по платежам<i class="remove"></i></li>
+						</ul>
+						<i class="save"></i>
+					</div>-->
+					<ul class="list">
+						<li>
+							<i class="remove"></i>
+							<p>Дата</p>
+							<ul>
+								<li class="active">24.03.16 – 26.03.16<i class="calendar"></i></li>
+								<li>сегодня</li>
+								<li>вчера</li>
+								<li>текущая неделя</li>
+								<li>прошлая неделя</li>
+								<li>текущий месяц</li>
+								<li>прошлый месяц</li>
+							</ul>
+						</li>
+						<li>
+							<i class="remove"></i>
+							<p>Тип транзакции</p>
+							<ul>
+								<li>все</li>
+								<li>transfer</li>
+								<li>purchase</li>
+								<li>preauth</li>
+								<li>reversal</li>
+								<li>refund</li>
+								<li class="active">chargeback</li>
+								<li>retrieval requatst</li>
+								<li>fraud</li>
+							</ul>
+						</li>
+						<li>
+							<i class="remove"></i>
+							<p>Статус транзакции</p>
+							<ul>
+								<li>все</li>
+								<li class="active">aproved</li>
+								<li>declined</li>
+								<li>pending</li>
+							</ul>
+						</li>
+					</ul>
+					<h6 class="add"><span>Добавить фильтр</span></h6>
+					<button class="accept">Применить</button>
+				</div>
+				<div class="table-l">
+					<div class="quant-per-page">
+						<p>Строк</p>
+						<select>
+							<option>10</option>
+							<option>20</option>
+							<option>50</option>
+							<option>100</option>
+						</select>
+					</div>
+					<div class="pages">
+						<em class="prev"></em>
+						<p>10-20</p>
+						<em class="next"></em>
+					</div>
+					<div class="search">
+						<input type="text" placeholder="Поиск по транзакциям">
+					</div>
+					<span class="export"></span>
+					<table class="type6">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Проект <span>Дата и время</span></th>
+								<th><em class="text-d">ID транзакции</em><em class="text-m">ID тр.</em> <span><em class="text-d">Тип транзакции</em><em class="text-m">Тип тр.</em></span></th>
+								<th>ID заказа <span>E-mail</span></th>
+								<th>Метод платежа <span>Платежная система</span></th>
+								<th>Значение 1 <span>Значение 2</span></th>
+								<th>Сумма</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><i class="status green"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>MoneySend</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="minus">1 000 <em>С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status red"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>Purchase</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="plus">30 000 <em>С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status orange"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>MoneySend</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="minus">1 000 <em>С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status red"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>Purchase</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="plus">30 000 <em>С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status orange"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>MoneySend</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="minus">1 000 <em>С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<aside>
+				<div class="repayment">
+					<h4>Объемы продаж</h4>
+				</div>
+				<div class="repayment">
+					<h4>Способы оплаты</h4>
+				</div>
+			</aside>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<footer>
+		<div>
+			<ul class="nav">
+				<li><a href="#">Условия</a></li>
+				<li><a href="#">Безопасность</a></li>
+				<li><a href="#">Интеграция</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<div>
+				<p>© 2015 PSP, LLC</p>
+				<p>Платежный сервис «Mandarin»</p>
+			</div>
+			<h6>Банковские услуги предоставляет РНКО "РИБ", лицензия Банка России №2749-К от 08.04.2015 г.</h6>
+			<ul class="icons">
+				<li><img src="./img/visa_icon.png" width="64" height="28" alt=""></li>
+				<li><img src="./img/mastercard_icon.png" width="69" height="26" alt=""></li>
+				<li><img src="./img/pci_icon.png" width="72" height="28" alt=""></li>
+				<li><img src="./img/thawte_icon.png" width="90" height="28" alt=""></li>
+			</ul>
+		</div>
+	</footer>
+	<script src="./js/dynamic.js"></script>
+</body>
+</html>

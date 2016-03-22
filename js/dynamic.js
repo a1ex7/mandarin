@@ -118,7 +118,13 @@ function walletFavorite() {
 		});
 	}
 }
+function headerNavPos() {
+	$('header .menu').css({
+		'right': $('aside').outerWidth()+50+'px'
+	});
+}
 $(document).ready(function() {
+	headerNavPos();
 	if ( $('.card-l .progress-l').length > 0 ) {
 		$('.card-l .progress-l').each(function() {
 			$(this).prepend('<p class="val-l">'+$(this).attr('data-l')+' <em>С</em></p>');
@@ -398,8 +404,29 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(this).addClass('active').siblings().removeClass();
 	}).filter(':first').click();
+	$('.filter-m .list > li > ul > li').bind('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
+	});
+	if ( $('.filter-m').length > 0 ) {
+		if ( $('.menu-open').is(':visible') ) {
+			$('.filter-m .expand').siblings('.list, .add, .accept').hide();
+			$('.filter-m .expand').addClass('hidden');
+		}
+		$('.filter-m .expand').bind('click', function(e) {
+			e.preventDefault();
+			if ( $(this).hasClass('hidden') ) {
+				$(this).siblings('.list, .add, .accept').show();
+				$(this).removeClass('hidden');
+			} else {
+				$(this).siblings('.list, .add, .accept').hide();
+				$(this).addClass('hidden');
+			}
+		});
+	}
 });
 $(window).resize(function() {
+	headerNavPos();
 	zoom();
 	if ( $('.serv-ul').length > 0 ) {
 		servUL();
