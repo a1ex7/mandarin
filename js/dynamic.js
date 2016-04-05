@@ -424,6 +424,9 @@ $(document).ready(function() {
 			}
 		});
 	}
+	if ( $('input[type="checkbox"]').length > 0 ) {
+		$('input[type="checkbox"]').uniform();
+	}
 });
 $(window).resize(function() {
 	headerNavPos();

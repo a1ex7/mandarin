@@ -11,7 +11,7 @@
 <body>
 	<div class="wrapper">
 		<header>
-			<div class="logo type2"></div>
+			<div class="logo type1"></div>
 			<ul class="menu">
 				<li><a href="#">Как это работает</a></li>
 				<li><a href="#">О нас</a></li>
@@ -43,8 +43,8 @@
 							<tr>
 								<th></th>
 								<th>Проект <span>Merchant ID</span></th>
-								<th>Баланс <span>Ожидается</span></th>
 								<th></th>
+								<th>Баланс <span>Оборот</span></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -52,45 +52,121 @@
 								<td><i class="status green"></i></td>
 								<td>
 									<div>Цветная жизнь <span>252525</span></div>
+								</td>
+								<td>
+									<button class="list"></button>
 									<button class="settings"></button>
+									<button class="cash">Вывести</button>
 								</td>
 								<td>2 000 <em>С</em> <span>50 000 <em>С</em></span></td>
-								<td><button class="cash">Вывести</button></td>
 							</tr>
 							<tr>
 								<td><i class="status red"></i></td>
 								<td>
 									<div>Цветная жизнь <span>252525</span></div>
+								</td>
+								<td>
+									<button class="list"></button>
 									<button class="settings"></button>
+									<button class="cash">Вывести</button>
 								</td>
 								<td>2 000 <em>С</em> <span>50 000 <em>С</em></span></td>
-								<td><button class="cash">Вывести</button></td>
 							</tr>
 							<tr>
 								<td><i class="status orange"></i></td>
 								<td>
 									<div>Магазин часов <span>343434</span></div>
+								</td>
+								<td>
+									<button class="list"></button>
 									<button class="settings"></button>
+									<button class="cash">Вывести</button>
 								</td>
 								<td>3 000 <em>С</em> <span>70 000 <em>С</em></span></td>
-								<td><button class="cash">Вывести</button></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 				<div class="table-l">
-					<h2>Транзакции</h2>
-					<span class="refresh"></span>
-					<ul class="filter">
-						<li><span>По дате</span></li>
-						<li><span>Статус транзацкии</span></li>
-						<li><span>Способ оплаты</span></li>
-						<li><span>Прочие</span></li>
-					</ul>
+					<div class="quant-per-page">
+						<p>Строк</p>
+						<select>
+							<option>10</option>
+							<option>20</option>
+							<option>50</option>
+							<option>100</option>
+						</select>
+					</div>
+					<div class="pages">
+						<em class="prev"></em>
+						<p>10-20</p>
+						<em class="next"></em>
+					</div>
 					<div class="search">
 						<input type="text" placeholder="Поиск по транзакциям">
 					</div>
-					<table class="type2">
+					<span class="export"></span>
+					<table class="type6">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Проект <span>Дата и время</span></th>
+								<th><em class="text-d">ID транзакции</em><em class="text-m">ID тр.</em> <span><em class="text-d">Тип транзакции</em><em class="text-m">Тип тр.</em></span></th>
+								<th>ID заказа <span>E-mail</span></th>
+								<th>Метод платежа <span>Платежная система</span></th>
+								<th>Значение 1 <span>Значение 2</span></th>
+								<th>Сумма</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><i class="status green"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>MoneySend</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="minus">1 000 <em class="rub">С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status red"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>Purchase</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="plus">30 000 <em class="rub">С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status orange"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>MoneySend</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="minus">1 000 <em class="rub">С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status red"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>Purchase</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="plus">30 000 <em class="rub">С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+							<tr>
+								<td><i class="status orange"></i></td>
+								<td><em class="text-cut">Актив Экспресс</em> <span>21.11.16&nbsp;&nbsp;11:37:00</span></td>
+								<td>100627 <span>MoneySend</span></td>
+								<td>435645303450 <span><em class="text-cut">justdealman@gmail.com</em></span></td>
+								<td>427638XXXXXX1892 <span>VISA</span></td>
+								<td>Вася Иванов <span>Вася Иванов</span></td>
+								<td><span class="minus">1 000 <em class="rub">С</em></span> <span class="remove"><em>Отмена</em></span></td>
+							</tr>
+						</tbody>
+					</table>
+					<!--<table class="type2">
 						<thead>
 							<tr>
 								<th></th>
@@ -111,7 +187,7 @@
 								<td>435645303450 <span>2345434556234</span></td>
 								<td>Иванов И. И. <span>Qiwi</span></td>
 								<td>Apple Watch</td>
-								<td><span class="plus">2 000 <em>С</em></span></td>
+								<td><span class="plus">2 000 <em class="rub">С</em></span></td>
 								<td><button class="cancel">Отмена</button></td>
 							</tr>
 							<tr>
@@ -121,7 +197,7 @@
 								<td>435645303450 <span>435645303450</span></td>
 								<td>Иванов И. И. <span>VISA</span></td>
 								<td></td>
-								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
+								<td><span class="minus">7 000 <em class="rub">С</em></span> <span class="rub">70 <em>С</em></span></td>
 								<td><button class="cancel">Отмена</button></td>
 							</tr>
 							<tr>
@@ -131,7 +207,7 @@
 								<td>435645303450 <span>2345434556234</span></td>
 								<td>Иванов И. И. <span>Mandarin</span></td>
 								<td>Яше хоз нужды</td>
-								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
+								<td><span class="minus">7 000 <em class="rub">С</em></span> <span class="rub">70 <em>С</em></span></td>
 								<td><button class="cancel">Отмена</button></td>
 							</tr>
 							<tr>
@@ -141,7 +217,7 @@
 								<td>435645303450 <span>2345434556234</span></td>
 								<td>Иванов И. И. <span>Qiwi</span></td>
 								<td>Apple Watch</td>
-								<td><span class="plus">2 000 <em>С</em></span></td>
+								<td><span class="plus">2 000 <em class="rub">С</em></span></td>
 								<td><button class="cancel">Отмена</button></td>
 							</tr>
 							<tr>
@@ -151,11 +227,11 @@
 								<td>435645303450 <span>435645303450</span></td>
 								<td>Иванов И. И. <span>VISA</span></td>
 								<td></td>
-								<td><span class="minus">7 000 <em>С</em></span> <span>70 <em>С</em></span></td>
+								<td><span class="minus">7 000 <em class="rub">С</em></span> <span class="rub">70 <em>С</em></span></td>
 								<td><button class="cancel">Отмена</button></td>
 							</tr>
 						</tbody>
-					</table>
+					</table>-->
 				</div>
 			</div>
 			<aside>
